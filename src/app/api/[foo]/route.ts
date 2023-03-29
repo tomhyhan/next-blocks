@@ -1,6 +1,5 @@
-export async function GET(request: Request) {
-    // @ts-ignore
-    console.log(request.query);
-    return new Response('Hello, random!')
+export async function GET(request: Request, {params} : any) {
+    console.log(params.foo);
+    return new Response(`Hello, ${params.foo}`)
   }
   
